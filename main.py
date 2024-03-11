@@ -35,7 +35,7 @@ def get_text_chunks(text):
     return chunks
 
 def get_vector_store(text_chunks, api_key):
-    embeddings = OpenAIEmbeddings(model="text-embedding-ada-002", openai_api_key="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")
+    embeddings = OpenAIEmbeddings(model="text-embedding-ada-002", openai_api_key=os.environ.get("OPENAI_API_KEY"))
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     vector_store.save_local("faiss_index")
 
@@ -113,7 +113,7 @@ def user_input(user_question, document_text):
 #     st.write("Reply: ", response["output_text"]) 
 
 # st.write("stream lit check")
-api_key = "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" 
+api_key = os.environ.get("OPENAI_API_KEY")
 
 def main():
 
