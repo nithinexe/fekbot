@@ -2,7 +2,6 @@ import openai
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-# from langchain_google_genai import GoogleGenerativeAIEmbeddings Change to openai
 from langchain.embeddings.openai import OpenAIEmbeddings
 # import google.generativeai as genai Change it to openai embeddings 
 
@@ -64,7 +63,7 @@ def get_conversational_chain(context, user_question):
     return response.choices[0].text
 
 
-
+# ignore this shitty functions
 # def get_conversational_chain():
 #     client = Client(api_key=os.environ.get("OPENAI_API_KEY"))
 #     prompt_template = "answer with reference to the doc"
