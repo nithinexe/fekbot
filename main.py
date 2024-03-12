@@ -14,7 +14,7 @@ from langchain.prompts import PromptTemplate
 
 import streamlit as st 
 import openai
-st.set_page_config(page_title="Document Genie", layout="wide")
+st.set_page_config(page_title="Chadukune Bot", layout="wide")
 # st.write("stream lit check")
 
 st.markdown("""## Chaduko bro bagupadthav....""")
